@@ -1,0 +1,37 @@
+.card {
+    width: 345px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.card__image-container {
+    width: fit-content;
+    position: relative;
+}
+
+.card__image {
+    width: 345px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+}
+
+.card__duration {
+    position: absolute;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    bottom: 8px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+.card__title {
+    margin-top: 12px;
+    color: #0f0f0f;
+    font-size: 16px;
+    font-weight: 500;
+}

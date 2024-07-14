@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <title>YoutubeCard</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/video-card.css') }}">
+</head>
+<body>
+<section class="hero">
+    <div class="hero__section results-section">
+        <div id="results">
+
+        </div>
+    </div>
+    <div class="hero__section options-section">
+        <div>
+            <label for="url">Lien de la vidéo</label>
+            <input
+                    type="text"
+                    id="url"
+                    name="url"
+                    placeholder="youtube.com"
+                    hx-trigger="input delay:500ms"
+                    hx-post="/"
+                    hx-target="#results"
+            >
+            <label for="progress">Progression</label>
+            <input type="range" id="progress">
+        </div>
+
+        <button>Exporter</button>
+    </div>
+</section>
+</body>
+</html>
